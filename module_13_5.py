@@ -21,8 +21,8 @@ class UserState(StatesGroup):
 key1 = ReplyKeyboardMarkup(resize_keyboard=True)
 but1 = KeyboardButton('Рассчитать')
 but2 = KeyboardButton('Информация')
-key1.add(but1)
-key1.add(but2)
+key1.add(but1, but2)
+
 
 @dp.message_handler(text='Рассчитать')
 async def set_age(message):
